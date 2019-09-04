@@ -1,0 +1,114 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\title{Enumerative geometry on manifolds}
+\author{Wei Jiang}
+\date{August 2019}
+
+\begin{document}
+
+\theoremstyle{definition}
+\newtheorem{df}{Def}[section]
+\newtheorem{eg}[df]{Eg}
+\newtheorem{thm}[df]{Thm}
+
+\input{title/title.tex}
+\tableofcontents
+\newpage
+
+\section{Introduction}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Manifolds and Grassmannian}
+ 
+
+When we try to describe curves on a 2-sphere, things become difficult. If we 
+work in $\mathbb{R}^{3}$, we increse the complexity. If we work in $\mathbb{R}^{2}$,
+indentifying some points on the sphere is inevitable, which over simplifies 
+the question. To deal with a topological spaces like sphere are not easy, however 
+we do have tools to describe such a space.
+
+\begin{df}
+An $n$-dimensional topological manifold is a topological space $X$ 
+together with a set of open sets on $X$ ${U_{\alpha}}$ 
+and maps $\phi_{\alpha} : U_{\alpha} \longrightarrow \mathbb{R}^{n} $
+such that \\
+
+(1) $X \subseteq \bigcup_{\alpha} U_{\alpha} $
+
+(2) Each $\phi_{\alpha}$ is a homeomorphism from $U_{\alpha}$ to a open set 
+$V_{\alpha} \subseteq \mathbb{R}^{n} $. \\
+
+The pair $(U_{\alpha},\phi_{\alpha})$ is called a chart for $X$. The collection 
+$\{(U_{\alpha},\phi_{\alpha})\}$ is called an atalas for $X$. \\
+
+Each $\phi_{\alpha}$ defines a system of coordinates on $U_{\alpha}$, which is
+the usual coordinates $(x_{1},x_{2},x_{3},...,x_{n})$ on 
+$V_{\alpha} \subseteq \mathbb{R}^{n}$. Thiese are the local coordinates on $U_{\alpha}$.
+Functions $f_{\alpha\beta} : V_{\beta}\longrightarrow V_{\alpha}$ defined by 
+$f_{\alpha\beta} = \phi_{\alpha} \circ \phi_{\beta}^{-1}$are called the transition
+ functions.
+
+\end{df}
+
+Now we can do calculations on manifolds use the local coordinates on $U_{\alpha}$, 
+and indentify calculations with different systems of coordinates using transion functions.
+
+\begin{eg}
+    The 2-sphere $S^{2}$ is a manifold.pick north and south poles, $(0,0,1)$ 
+    and $(0,0,-1)$ on $S^{2} \subset \mathbb{R}^{2}$. We have one-to-one correspondences
+    $\phi_{1} : S^{2}- \{(0,0,1)\} \longrightarrow \mathbb{R}^{2} $ and 
+    $\phi_{2} : S^{2}- \{(0,0,-1)\} \longrightarrow \mathbb{R}^{2}$ defined by\\
+    
+    \[
+    \phi_{1}(x,y,z) = (\frac{x}{1-z},\frac{y}{1-z}) \qquad 
+    \phi_{2}(x,y,z) = (\frac{x}{1+z},\frac{y}{1+z})
+    \]
+
+    With inverses
+
+    \begin{align*}
+    \phi_{1}^{-1}(x,y) & = {}(\frac{2x}{x^{2}+y^{2}+1},\frac{2y}{x^{2}+y^{2}+1},\frac{x^{2}+y^{2}-1}{x^{2}+y^{2}+1}) \\
+    \phi_{1}^{-1}(x,y) & = {}(\frac{2x}{x^{2}+y^{2}+1},\frac{2y}{x^{2}+y^{2}+1},-\frac{x^{2}+y^{2}-1}{x^{2}+y^{2}+1})
+    \end{align*}
+ 
+    We can easly show these are homeomorphisms, so $S^{2}$ is a manifold.
+\end{eg}
+
+
+\begin{df}
+A Grassmannian $Gr(k,n)$ over $\mathbb{C}$ is the space of all $k$-dimensional 
+linear subspace of $\mathbb{C}^{n}$. 
+\end{df}
+
+\begin{eg}
+$Gr(1,n)$ the projective spaces $\mathbb{P}^{n}$ .
+\end{eg}
+
+\begin{eg}
+$Gr(2,4)$ the hyperplanes in $\mathbb{P}^{4}$.
+\end{eg}
+
+\begin{thm}
+$Gr(k,n)$ is a manifold with dimension $k(n-k) $. 
+\end{thm}
+\begin{proof}
+
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Transverse intersection and cohomology}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Vector bundles and chern class}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Applications}
+\end{document}
