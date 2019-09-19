@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1568927768 "c:/Users/jiang/Urop/Urop/main.tex" "c:/Users/jiang/Urop/Urop/main.pdf" "main" 1568927778
+["pdflatex"] 1568928376 "c:/Users/jiang/Urop/Urop/main.tex" "c:/Users/jiang/Urop/Urop/main.pdf" "main" 1568931061
   "c:/Program Files/texlive/2019/texmf-dist/fonts/map/fontname/texfonts.map" 1567805204 3332 103109f5612ad95229751940c61aada0 ""
   "c:/Program Files/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1567804060 1004 54797486969f23fa377b128694d548df ""
   "c:/Program Files/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1567804060 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -66,17 +66,17 @@
   "c:/Program Files/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1567808062 4679151 8da8e24b7d01d4e96eb2fe9f73342d62 ""
   "c:/Program Files/texlive/2019/texmf-var/web2c/pdftex/pdflatex.fmt" 1567808200 4267774 610cd435227347c56385488b5d7d3bea ""
   "c:/Program Files/texlive/2019/texmf.cnf" 1567808038 673 4ae7b2f49cee444c5343a45b5d0f169c ""
-  "c:/Users/jiang/Urop/Urop/main.aux" 1568927769 556 4e025ba64a869187bea1f3174d4d79bb ""
-  "c:/Users/jiang/Urop/Urop/main.tex" 1568927777 5401 d19c8248bff6ac499bb75790ed85beec ""
-  "main.aux" 1568927769 556 4e025ba64a869187bea1f3174d4d79bb "pdflatex"
-  "main.tex" 1568927777 5401 d19c8248bff6ac499bb75790ed85beec ""
-  "main.toc" 1568927769 348 3de5766141a3b0ba8326f727df9ce1f7 "pdflatex"
+  "c:/Users/jiang/Urop/Urop/main.aux" 1568928377 556 4e025ba64a869187bea1f3174d4d79bb ""
+  "c:/Users/jiang/Urop/Urop/main.tex" 1568931060 6186 6ebf5d1a878efd103f735875a0e64aa3 ""
+  "main.aux" 1568928377 556 4e025ba64a869187bea1f3174d4d79bb "pdflatex"
+  "main.tex" 1568931060 6186 6ebf5d1a878efd103f735875a0e64aa3 ""
+  "main.toc" 1568928377 348 3de5766141a3b0ba8326f727df9ce1f7 "pdflatex"
   "title/logo.eps" 1567620096 1035249 2a765178ac86a28707fc186e4b6fbf28 ""
   "title/title.tex" 1567620096 2435 7e3441795f7cc03b58d8c4468bb382ac ""
   (generated)
+  "c:/Users/jiang/Urop/Urop/main.log"
   "main.aux"
+  "c:/Users/jiang/Urop/Urop/main.pdf"
   "main.log"
   "main.pdf"
-  "c:/Users/jiang/Urop/Urop/main.pdf"
-  "c:/Users/jiang/Urop/Urop/main.log"
   "main.toc"

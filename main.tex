@@ -13,6 +13,8 @@
 \theoremstyle{definition}
 \newtheorem{df}{Def}[section]
 \newtheorem{eg}[df]{Eg}
+
+\theoremstyle{plain}
 \newtheorem{thm}[df]{Thm}
 
 \input{title/title.tex}
@@ -127,6 +129,21 @@ Then we consider the case when our varieties has degree $> 1$.
     after restricting all transition functions to the sets of open cover $\{U_{\alpha}\cap U_{\beta}^{'}\}$  
     
 \end{df}
+
+If we restricting to just complex manifold there is another way 
+to view line bundles from a more geometric aspect. \\
+
+Given transition functions $g_{\alpha\beta}$ subordinate to $\{ U_{\alpha}\}$.We build a new complex manifold
+$E$ of dimension $ n +1$, where $n = \text{dim} X$. Then $E$ can be obtained
+from the cover $\{U_{\alpha} \times \mathbb{C}\}$ by indentifying $(p,v_{\alpha}) \in 
+U_{\alpha} \times \mathbb{C}$ and $(q,v_{\beta}) \in U_{\beta} \times \mathbb{C}$
+ if $p = q$ and $v_{\alpha} = g_{\alpha\beta}(p) \cdot v_{\beta}$.
+From this relations we define charts on $E$:
+
+\begin{align*}
+    \phi_{\alpha} \times 1 : U_{\alpha} \times \mathbb{C} \longrightarrow \mathbb{C}^{n} \times \mathbb{C} = \mathbb{C}^{n+1} 
+\end{align*}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
