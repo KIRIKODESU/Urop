@@ -73,7 +73,7 @@ and indentify calculations with different systems of coordinates using transion 
     
     \begin{align*}
     \phi_{1}^{-1}(x,y) & = {}(\frac{2x}{x^{2}+y^{2}+1},\frac{2y}{x^{2}+y^{2}+1},\frac{x^{2}+y^{2}-1}{x^{2}+y^{2}+1}) \\
-    \phi_{1}^{-1}(x,y) & = {}(\frac{2x}{x^{2}+y^{2}+1},\frac{2y}{x^{2}+y^{2}+1},-\frac{x^{2}+y^{2}-1}{x^{2}+y^{2}+1})
+    \phi_{2}^{-1}(x,y) & = {}(\frac{2x}{x^{2}+y^{2}+1},\frac{2y}{x^{2}+y^{2}+1},-\frac{x^{2}+y^{2}-1}{x^{2}+y^{2}+1})
     \end{align*}
  
     We can easly show these are homeomorphisms, so $S^{2}$ is a manifold.
@@ -100,6 +100,36 @@ $Gr(k,n)$ is a manifold with dimension $k(n-k) $.
 \begin{proof}
 
 \end{proof}
+Then we consider the case when our varieties has degree $> 1$.
+
+\begin{df}
+    
+\end{df}
+\begin{df}
+    Let $X$ be a complex manifold with a atalas $\{U_{\alpha}\}$. If we have holomorphic
+    functions $g_{\alpha \beta}$ defined on each ${U_{\alpha}\cap U_{\beta}}$ such that 
+    $g_{\alpha\alpha} = 1$ and $g_{\alpha \gamma} = g_{\alpha \beta} g_{\beta \gamma}$ 
+    on  each $U_{\alpha}\cup U_{\beta}\cap U_{\gamma} \neq \emptyset$, then we call 
+    ${g_{\alpha\beta}}$ transitions subordinate to $\{U_{\alpha}\}$.
+
+\end{df}
+
+\begin{df}
+    Let $g_{\alpha \beta }$ and $g_{\alpha \beta}^{'}$ be transition funtions subordinate
+    to the open cover ${U_{|alpha}}$. $g\sim g^{'} $ if there are nowhere vanishing holomorphic functions
+    $f_{\alpha}$ on ${U_{\alpha}}$ such that $g_{\alpha \beta } = f_{\alpha} g_{\alpha \beta}^{'} f_{\beta}^{-1}$.
+    The set of equivalence classes is called the set of line bundles which can be trivialised over $\{U_{\alpha}\}$
+
+    
+\end{df}
+
+\begin{df}
+    A line bundle on a topological manifold $X$ with open cover $\{U_{\alpha}\}$ is a line bundle which can 
+    be trivialised over some open covering ${U_{\alpha}}$. A line bundle $L$ trivialised over ${U_{\alpha}}$
+    is equivalent to a line bundle $L^{'}$ trivialised over ${U_{\beta}^{'}}$ if they are equivalent
+    after restricting all transition functions to the sets of open cover $\{U_{\alpha}\cap U_{\beta}^{'}\}$  
+    
+\end{df}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
@@ -113,3 +143,18 @@ $Gr(k,n)$ is a manifold with dimension $k(n-k) $.
 \newpage
 \section{Applications}
 \end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
