@@ -222,6 +222,87 @@ $B_{K}(X) = Im(\partial_{k+1})$ is the group of k-boundaries.
     \end{align*}
 \end{df}
 
+
+Now we want to associate k-dimensional submanifolds of $X$ to homology classes in the $k^{th}$
+homology group. So we can keep track of the dimension of different submanifolds. To make things 
+easier, wo only consider the case when $X$ is an oriented manifold and only the oriented submanifolds
+in $X$.
+
+\begin{df}
+    An oriented triangulation of $Z$ is a decomposition $Z= \cup Z_{i}$ of $Z$ into a union of
+    finitedly many subsets $Z_{i}$ such that the following hold:
+    \begin{align*}
+        \text{There are orientation-preserving homeomorphisms} \\
+        f_{i} : \Delta_{k} \rightarrow Z_{i} \\
+        \text{Any intersection $Z_{i_{1}}\cap \ddots \cap Z_{i_{R}}$ is identified via any of the 
+        $f_{i_{l}}$ with a face of $\Delta_{k}$
+        }
+    \end{align*}
+
+\end{df}
+
+Now we want to show if $Z$ is compact and oriented submanifold of a compact complex manifold
+, $[Z]$ is a homology class. We choose a triangulation as above $T = \sum_{i} f_{i} \in C_{k}(X)$. 
+
+\begin{lm}
+    $\partial_{k}T = 0$
+\end{lm}
+
+\begin{proof}
+    $\partial_{k}T=\sum_{i}g_{i}, g_{i}\in C_{k-1}(X) $.  As $Z$ compact and oriented, each of the 
+    $(K-1)$-chain is in the boundaries of exactly two $k$-chains on the opposite side. So each of the
+    $(k-1)$-chain appears in the sum exactly twice, once with a plus sign and once with a minus sign.
+    So $\partial_{k}T = 0$.
+\end{proof}
+
+And this is true even when we choose a different triangulation.
+
+However, homology is not the best tool to describe the intersection of these submanifolds.
+Cohomology is the better tool and it is highly realated to homology via Poicare duality. We can
+define it by a lot of definition we used for homology.
+
+\begin{df}
+    The group of $k$-cochains is 
+    \begin{align*}
+        C^{k}(X) = Hom (C_{k}(X),Z)
+    \end{align*}
+    The coboundary map is:
+    \begin{align*}
+        \delta_{k} : & C^{k}(X) \rightarrow C^{k+1}(X) \\
+                     & (\delta_{k}(f))(Z) = f(\partial_{k+1}(Z))
+    \end{align*}
+    where $f \in C^{k}(X)$ and $Z \in C_{k+1}(X)$
+\end{df}
+
+\begin{lm}
+    $\delta_{k}\circ \delta{k-1} = 0$
+\end{lm}
+
+\begin{proof}
+    \begin{align*}
+        ((\delta_{k}\circ \delta_{k-1})(f))(Z) &= (\delta_{k}(\delta_{k-1}(f)))(Z) \\
+                                               &= (\delta_{k-1}(f)(\partial_{k}(Z)))\\
+                                               &= f(\partial_{k-1}\circ \partial_{k}(Z) )= 0
+    \end{align*}
+    
+\end{proof}
+Similarly the group Ker$(\delta_{k})$ is called the group of k-cocycles $Z^{k}(X)$and the 
+group Im$(\delta_{k})$ is called the group of k-cobundaries $B^{k}(X)$. and we have $B^{k}(X) \subset Z^{k}(X)$.
+
+\begin{df}
+    The $k^{th}$ cohomology group is the quotient 
+    \begin{align*}
+        H^{k}(X) = \frac{Z^{k}(X)}{B^{k}(X)}
+    \end{align*}  
+    And immediately there is a pairing between cohomology and homology:
+    \begin{align*}
+        \langle \; ,\ \rangle : & H^{k}(X)\times H_{k}(X) \rightarrow \mathbb{Z} \\
+                                & \langle [f],[Z] \rangle = f(Z)         
+    \end{align*}  
+
+\end{df}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 \section{Enumerative problem with lines}
