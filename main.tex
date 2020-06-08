@@ -1,45 +1,156 @@
-\documentclass{article} 
+\documentclass[12pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{amssymb}
 \usepackage{graphicx}
-\title{Enumerative geometry on manifolds}
+\usepackage{natbib}
+\usepackage{adjustbox}
+\usepackage{fullpage}
+\setlength{\parskip}{1em}
+\title{Enumerative geometry of lines}
 \author{Wei Jiang}
 \date{August 2019}
+\newcommand{\BigWedge}{\mathord{\adjustbox{valign=B,totalheight=.6\baselineskip}{$\bigwedge$}}}
 
 \begin{document}
 
+
+
 \theoremstyle{definition}
-\newtheorem{df}{Def}[section]
-\newtheorem{eg}[df]{Eg}
+\newtheorem{df}{Definition}[section]
+\newtheorem{eg}[df]{Example}
+
 
 \theoremstyle{plain}
-\newtheorem{thm}[df]{Thm}
-\newtheorem{lm}[df]{Lem}
+\newtheorem{thm}[df]{Thmorem}
+\newtheorem{lm}[df]{Lemma}
 \input{title/title.tex}
 \tableofcontents
 \newpage
 
-\section{Introduction}
+\section*{Introduction}
+\newpage
+
+\section{Grassmannian as projective variety}
+
+How can we parametrized all lines in a projective space $\mathbb{P}^{n}$ ? We know a line $l$ in $\mathbb{P}^{n}$ corresponds to a 2-dimensional linear subspace of $\mathbb{A}^{n}$. So the the question transfers to parameterising linear subspaces of a vector space.
+
+
+
+\begin{df}
+    Let $V$ be a vector space of dimension $n$, define $G(k,n)$ to be the set of all linear $k$-subspaces of $V$.
+\end{df}
+ 
+\begin{eg}
+    A first example of such a space is projective spaces $\mathbb{P}^{n}$ or they can be denoted as $G(1,n + 1)$. Lines in $\mathbb{P}^{n}$ form $G(2,n+1)$. 
+\end{eg}
+
+To avoid confusion, if $\Lambda$ is a k-dimensional subspace of a n-dimension vector space $V$, then we use $[\Lambda] \in G(k,n)$ to denote the point corresponds to the subspace.
+\\
+
+It can be shown that Grassmannian is a projective variety, so we can use all the tools in intersection theory to deal with it. The structure can be seen via a method called Plucker embedding.\\
+
+Let $\Lambda \subset V$ be a k-dimensional subspace, then $\BigWedge^{k}\Lambda$ is a 1-dimensional subspace of $\BigWedge^{n}V$. More precisely, if $v_{1},...,v_{k}$ is a basis of $\Lambda$, then $\BigWedge^{k}\Lambda$ is the line spanned by $ v_{1}\wedge...\wedge v_{k}$. This corresponds to a point of $\mathbb{P}\BigWedge^{k}V$. \\
+
+(By $\mathbb{P}V$ we mean the quotient of $V$ by the relation $v~w$ iff $v = \lambda w$. This is similar to the construction of projective space)\\
+
+This gives a map of sets $G(k,n) \longrightarrow \mathbb{P}\BigWedge^{k}V \cong \mathbb{P}^{ {n \choose k} -1}$. This map is called Plucker embedding.
+
+\begin{lm}
+    This map  $G(k,n) \longrightarrow \mathbb{P}\BigWedge^{k}V \cong \mathbb{P}^{ {n \choose k} -1}$ is injective.
+\end{lm}
+
+\begin{proof}
+    let $v_{1},...,v_{k}$ be a basis of $\Lambda \subset V$, we can extend it to a basis of $V$ by adding linear independent vectors $ u_{k+1},...u_{n}$. Let $a =  v_{1}\wedge...\wedge v_{k}$, then $\forall v \in V$, $v \wedge a = 0$ if and only if $ (b_{1}v_{1}+...b_{n}u_{n})\wedge a = 0$ iff  $b_{k+1}u_{k+1}\wedge a + ... +  b_{n}u_{n}\wedge a =0 $ iff $ v \in \Lambda$ so $ a$ determines $\Lambda$.
+\end{proof}
+
+So $G(k,n) $ is isomorphic to its image in $\mathbb{P}\BigWedge^{k}V$. Lets call its image $G$. It left to show that its image is the common zero locus of some homogeneous polynomials. We can show this by express our k-subspace as a matrix.\\
+
+
+Let ${e_1,e_2,...,e_n}$ is a basis for $V$,we can identify $V$ as $k^{n}$ then any $k$-vector space is the span of $k$ linear independent vectors in this basis. We can write them as a matrix:
+$$
+\begin{pmatrix}
+    a_{1,1}& a_{1,2} & \dots & a_{1,n}\\
+    a_{2,1}& a_{2,2} & \dots & a_{2,n}\\
+    \vdots & \vdots & \ddots & \vdots \\
+    a_{k,1}& a_{k,2} & \dots & a_{k,n}    
+\end{pmatrix}
+$$
+
+
+
+However, just like coordinates of points in a projective space, the matrix $A$ is not unique. Since we can multiply on the left any invertible $k \times k$ matrix $\Omega$ without changing the row spaces, because the rows in $\Omega A$ are linear combinations of the rows in $A$.  
+In this setting, $\BigWedge^{k}V$ is given by the set
+
+
+\[ \{e_{i1}\wedge...\wedge e_{ik}\}_{1\leq i1<...<ik\leq n}\]
+
+
+After the Plucker embedding, this matrix get sent to the wedge product of row vectors:
+
+
+\[ v_{1}\wedge...\wedge v_{k} = \sum_{1\leq i1<...<ik\leq n} D_{i1,...,ik} e_{i1}\wedge...\wedge e_{ik}   \]
+
+Where $D_{i1,...,ik}$ is the determinant of k minors of the matrix $A$. However, just like coordinates of points in a projective space, the matrix $A$ is not unique. Since we can multiply on the left any invertible $k \times k$ matrix $\Omega$ without changing the row spaces, because the rows in $\Omega A$ are linear combinations of the rows in $A$.If we choose another basis of $\Lambda$, then the result is multiply by the determinant of $\Omega$. As $\Omega$ invertible, the determinant is never $0$, so the product is always the same point in $\mathbb{P}\BigWedge^{k}V$.\\
+
+Now we try to find these homogeneous polynomials that defines $Im(G(k,n))$. For any k-subspace, we can find k linearly independent vectors that span it. So $\omega \in \mathbb{P}\BigWedge^{k}V$ is in the image if and only if there exits $v_{1},...,v_{k}$(linearly independent) such that $\omega = v_{1}\wedge ... \wedge v_{k}$.
+
+\begin{lm}
+    $\omega \in \mathbb{P}\BigWedge^{k}V$ such that $\omega = v_{1}\wedge ... \wedge v_{k}$ if and only if the map:
+
+    \[ V \xrightarrow{\wedge \omega} \mathbb{P}\BigWedge^{k+1}V\]
+
+    has kernel of dimension at least k.
+\end{lm}
+    
+\begin{proof}
+    $(\Rightarrow)$ Trivial as ${v_{i}}$ is basis of the kernel.
+    $(\Leftarrow)$ If the kernel has dimension at least k, then there exits $v_{1},...,v_{k}$(linearly independent), such that $v_{i}\wedge \omega = 0, 1\leq i \leq k$. \\
+    Lets start from $v_{1}$, if $v_{i}\wedge \omega = 0$, then there exists $\omega' \in \mathbb{P}\BigWedge^{k-1}V$ such that $\omega = v_{0}\wedge \omega'$. Repeat this process, we can see that $\omega = v_{1}\wedge ... \wedge v_{k}$.
+    
+\end{proof}
+
+Then the image can be expressed as:
+ \[G = \{\omega \in \mathbb{P}\BigWedge^{k}V \ | \ \text{rank}(V \xrightarrow{\wedge \omega} \mathbb{P}\BigWedge^{k+1}V) \leq n-k  \} \]
+
+This can be interpreted as the zero locus of degree $(n-k+1)$ homogeneous polynomials that are determinant of $(n-k+1)$ minors of the map $\wedge \omega: V \rightarrow \mathbb{P}\BigWedge^{k+1}V$ written as a matrix. So we can conclude that $G(k,n)$ is a variety.
+
+
+
+\section{From group of cycles to chow ring}
+
+
+
+
+
+
+
+
+
+
+\newpage
+A projective space can be covered by Zariski open subsets isomorphic to affine space. So we can define a local coordinates on projective space. Similarly, we can cover a Grassmannian $G = G(k,n)$ by Zariski open subsets as well. Too see this, fix an $(n-k)$-dimensional subspace $\Gamma \subset V$, and let $U_{\Gamma}$ be the subset of $k$-subspaces that do not meet $\Gamma$:
+\[U_{\Gamma} = \{ L\ \in\ G \ | \ L\ \cap\ \Gamma = \emptyset \}
+\]
+
+
+Lets show it is Zariski open: let ${w_1,w_2,\dots ,w_{n-k} }$ be a basis of $\Gamma$ and let
+ $\gamma = w_1 \wedge \dots \wedge w_{n-k}$then we have :
+
+\[
+U_{\Gamma} = \{ [\omega]   \in  G  \subset   \mathbb{P}(\BigWedge^k V) \ | \ \omega \wedge  \gamma \neq 0 \}
+\]
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
 
+\section{chern classes}
+
+\bibliographystyle{plain}
+\bibliography{ref}
 
 
 \end{document}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
