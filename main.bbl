@@ -1,3 +1,19 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{3264}
+D.~Eisenbud and J.~Harris.
+\newblock {\em 3264 and All That: A Second Course in Algebraic Geometry}.
+\newblock Cambridge University Press, 2016.
+
+\bibitem{fulton}
+W.~Fulton.
+\newblock {\em Intersection Theory}.
+\newblock Ergebnisse der Mathematik und ihrer Grenzgebiete. Springer New York,
+  2012.
+
+\bibitem{totaro_2014}
+BURT TOTARO.
+\newblock Chow groups, chow cohomology, and linear varieties.
+\newblock {\em Forum of Mathematics, Sigma}, 2:e17, 2014.
 
 \end{thebibliography}

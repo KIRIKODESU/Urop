@@ -1,3 +1,4 @@
 \contentsline {section}{\numberline {1}Grassmannian as projective variety}{3}%
 \contentsline {section}{\numberline {2}From group of cycles to chow ring}{5}%
-\contentsline {section}{\numberline {3}chern classes}{7}%
+\contentsline {section}{\numberline {3}The Chow ring of $\mathbb {G}(1,3)$}{9}%
+\contentsline {section}{\numberline {4}chern classes}{13}%
